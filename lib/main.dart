@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                       hintText: "Логин",
                       hintStyle: const TextStyle(
                           color: Color(0xffcecdd2), fontSize: 17),
-                      fillColor: const Color(0xfff0eff4),
+                      fillColor: Colors.grey.withOpacity(0.2),
                       filled: true,
                       contentPadding: const EdgeInsets.symmetric(
                         horizontal: 20,
@@ -72,7 +72,7 @@ class HomePage extends StatelessWidget {
                       hintText: "Пароль",
                       hintStyle: const TextStyle(
                           color: Color(0xffcecdd2), fontSize: 17),
-                      fillColor: const Color(0xfff0eff4),
+                      fillColor: Colors.grey.withOpacity(0.2),
                       filled: true,
                       contentPadding: const EdgeInsets.symmetric(
                         horizontal: 20,
@@ -86,25 +86,67 @@ class HomePage extends StatelessWidget {
                 Checkbox(
                   value: false,
                   onChanged: (bool? value) {},
-                  activeColor: const Color(0xff9a9a9c),
+                  activeColor: Colors.grey.withOpacity(0.9),
                 ),
                 const Text(
                   "Запомнить меня",
                   style: TextStyle(
-                    fontSize: 14,
-                    color: Color(0xff9a9a9c),
+                    fontSize: 16,
+                    color: Color(0xFF9F9EA3),
                   ),
                 ),
               ],
             ),
-            const SizedBox(
-              width: 380,
-              height: 50,
-              child: Text(
-                "Войти",
-                style: TextStyle(
-                    color: Color(0xfff0eff4), backgroundColor: Colors.black),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16.0, left: 16, right: 16),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF0B6BFE),
+                      textStyle: const TextStyle(color: Colors.white),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5))),
+                  child: const Text(
+                    'Войти',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
               ),
+
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16.0, left: 16, right: 16),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    textStyle: const TextStyle(color: Color(0xFF357DC1)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      side:
+                      const BorderSide(color: Color(0xFF357DC1), width: 1),
+                    ),
+                  ),
+                  child: const Text(
+                    'Регистрация',
+                    style: TextStyle(
+                        color: Color(0xFF357DC1),
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+            const Text(
+              'Восстановить пароль',
+              style: TextStyle(color: Color(0xFF9F9EA3), fontSize: 16),
             )
           ],
         ),
